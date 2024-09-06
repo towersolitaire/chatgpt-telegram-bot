@@ -3,14 +3,14 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-token = '6155381091:AAFPcgCkC72Jwl_zmdGyq6b-ZoUGsre_O0Q'
-openai.api_key = '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'
+token = 'BOT_TOKEN'
+openai.api_key = 'API_KEY'
 
 bot = Bot(token)
 dp = Dispatcher(bot)
 @dp.message_handler(commands=['start'])
 async def start_command(message : types.Message):
-    await message.answer("123")
+    await message.answer("Hello, im running")
 
 
 @dp.message_handler()
